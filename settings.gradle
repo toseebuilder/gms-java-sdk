@@ -1,2 +1,0 @@
-include ':gms_java'
-rootProject.name = "gms-java-sdk"
