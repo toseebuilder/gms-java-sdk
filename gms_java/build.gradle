@@ -1,9 +1,14 @@
-plugins {
-    id 'java-library'
-}
+apply plugin: "java"
+apply plugin: "maven"
 
+group = "com.github.rzrtcbuilder"
+version = 1.0
+
+repositories {
+    mavenCentral()
+}
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
+    sourceCompatibility = JavaVersion.VERSION_1_
     targetCompatibility = JavaVersion.VERSION_1_7
 }
 dependencies {
