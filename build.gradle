@@ -11,8 +11,15 @@ java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
 }
+jar {
+    from {
+        //添加依懒到打包文件
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+//        configurations.runtime.collect{zipTree(it)}
+    }
+}
 dependencies {
-//    compile fileTree(dir:'lib',include:['*.jar'])
+    compile fileTree(dir:'lib',include:['*.jar'])
     implementation('io.socket:engine.io-client:1.0.0') {
         exclude group: 'org.json', module: 'json'
     }
