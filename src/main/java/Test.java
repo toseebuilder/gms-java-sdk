@@ -9,55 +9,73 @@ import com.rz.gms.connect.bean.Options;
 import com.rz.gms.user.GMSAttributeWithState;
 import com.rz.gms.utils.EmptyUtils;
 import com.rz.gms.utils.EncryptUtils;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
 
 public class Test {
+
+    public static String TEST_APPID = "7zVD31N8WqmP0xyE";
+    public static String TEST_APPKEY = "e6cd8cec107a4b5abee9cfae52f15457";
+
     public static void main(String[] args) {
-        GMSClient instance = GMSClient.createInstance("7zVD31N8WqmP0xyE", new Options(new EnvConfig("https://api-dev.rzrtc.com")), new GMSClientListener() {
-            @Override
-            public void onConnectionStateChanged(int i, int i1) {
-                System.out.println("onConnectionStateChanged  "+ i + "====="+i1);
-
-            }
-
-            @Override
-            public void onMessageReceived(GMSMessage gmsMessage, String s) {
-
-            }
-
-            @Override
-            public void onPeersOnlineStatusChanged(Map<String, Integer> map) {
+        loginWithUserId("1111");
+        loginWithUserId("1112");
+        loginWithUserId("1113");
+        loginWithUserId("1114");
+        loginWithUserId("1115");
+        loginWithUserId("1116");
+        loginWithUserId("1117");
+        loginWithUserId("1118");
+        loginWithUserId("1119");
 
 
-            }
 
-            @Override
-            public void onTokenExpired() {
-
-            }
-
-            @Override
-            public void onPeersUserAttributesChanged(Map<String, ? extends List<GMSAttributeWithState>> map) {
-
-            }
-        });
-
-        long timestamp = System.currentTimeMillis();
-        String token = createToke("7zVD31N8WqmP0xyE", "1113", timestamp, "e6cd8cec107a4b5abee9cfae52f15457");
-
-        instance.login(new LoginParams(token, "1113", timestamp), new ResultCallback<Void>() {
-            @Override
-            public void onSuccess( Void unused) {
-                System.out.println("login success");
-            }
-
-            @Override
-            public void onFailure( ErrorInfo errorInfo) {
-
-            }
-        });
+//        GMSClient instance = GMSClient.createInstance("7zVD31N8WqmP0xyE", new Options(new EnvConfig("https://api-dev.rzrtc.com")), new GMSClientListener() {
+//            @Override
+//            public void onConnectionStateChanged(int i, int i1) {
+//                System.out.println("onConnectionStateChanged  " + i + "=====" + i1);
+//
+//            }
+//
+//            @Override
+//            public void onMessageReceived(GMSMessage gmsMessage, String s) {
+//
+//            }
+//
+//            @Override
+//            public void onPeersOnlineStatusChanged(Map<String, Integer> map) {
+//
+//
+//            }
+//
+//            @Override
+//            public void onTokenExpired() {
+//
+//            }
+//
+//            @Override
+//            public void onPeersUserAttributesChanged(Map<String, ? extends List<GMSAttributeWithState>> map) {
+//
+//            }
+//        });
+//
+//        long timestamp = System.currentTimeMillis();
+//        String token = createToke("7zVD31N8WqmP0xyE", "1113", timestamp, "e6cd8cec107a4b5abee9cfae52f15457");
+//
+//        instance.login(new LoginParams(token, "1113", timestamp), new ResultCallback<Void>() {
+//            @Override
+//            public void onSuccess(Void unused) {
+//                System.out.println("login success");
+//            }
+//
+//            @Override
+//            public void onFailure(ErrorInfo errorInfo) {
+//
+//            }
+//        });
     }
 
     public static String createToke(String appId, String userId, long timestamp, String appkey) {
@@ -70,8 +88,64 @@ public class Test {
         if (EmptyUtils.isEmpty(appkey)) {
             return null;
         }
-        String params = new StringBuffer("appId=").append(appId).append("&timestamp=").append(timestamp).append("&userId=").
-                append(userId).append(appkey).toString();
+        String params = "appId=" + appId + "&timestamp=" + timestamp + "&userId=" +
+                userId + appkey;
         return EncryptUtils.MD5(params);
     }
+
+    private static void loginWithUserId(String userId) {
+        long timestamp = System.currentTimeMillis();
+        String token = createToke(TEST_APPID, userId, timestamp, TEST_APPKEY);
+        GMSClient instance = createClientInstance2(userId);
+        assert token != null;
+        instance.login(
+                new LoginParams(token, userId, timestamp), new ResultCallback<Void>() {
+                    @Override
+                    public void onSuccess(@Nullable Void unused) {
+
+                    }
+
+                    @Override
+                    public void onFailure(@NotNull ErrorInfo errorInfo) {
+
+                    }
+                }
+        );
+    }
+
+
+    private static GMSClient createClientInstance2(String userId) {
+        return GMSClient.createInstance(
+//            applicationContext,
+                TEST_APPID,
+                new Options(new EnvConfig("https://api-dev.rzrtc.com")),
+                new GMSClientListener() {
+                    @Override
+                    public void onConnectionStateChanged(int i, int i1) {
+                        System.out.println(userId + " code " + i + "reason " + i1);
+                    }
+
+                    @Override
+                    public void onMessageReceived(@Nullable GMSMessage gmsMessage, @NotNull String s) {
+
+                    }
+
+                    @Override
+                    public void onPeersOnlineStatusChanged(@NotNull Map<String, Integer> map) {
+
+                    }
+
+                    @Override
+                    public void onTokenExpired() {
+
+                    }
+
+                    @Override
+                    public void onPeersUserAttributesChanged(@NotNull Map<String, ? extends List<GMSAttributeWithState>> map) {
+
+                    }
+                });
+
+    }
+
 }
