@@ -1,6 +1,11 @@
 import com.rz.gms.ErrorInfo;
 import com.rz.gms.ResultCallback;
 import com.rz.gms.bean.LoginParams;
+import com.rz.gms.channel.GMSChannel;
+import com.rz.gms.channel.GMSChannelListener;
+import com.rz.gms.channel.MemberLeftReason;
+import com.rz.gms.channel.bean.GMSChannelAttribute;
+import com.rz.gms.channel.bean.GMSChannelMember;
 import com.rz.gms.client.GMSClient;
 import com.rz.gms.client.GMSClientListener;
 import com.rz.gms.connect.bean.EnvConfig;
@@ -12,6 +17,7 @@ import com.rz.gms.utils.EncryptUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -22,14 +28,14 @@ public class Test {
 
     public static void main(String[] args) {
         loginWithUserId("1111");
-        loginWithUserId("1112");
-        loginWithUserId("1113");
-        loginWithUserId("1114");
-        loginWithUserId("1115");
-        loginWithUserId("1116");
-        loginWithUserId("1117");
-        loginWithUserId("1118");
-        loginWithUserId("1119");
+//        loginWithUserId("1112");
+//        loginWithUserId("1113");
+//        loginWithUserId("1114");
+//        loginWithUserId("1115");
+//        loginWithUserId("1116");
+//        loginWithUserId("1117");
+//        loginWithUserId("1118");
+//        loginWithUserId("1119");
 
 
 
@@ -102,6 +108,71 @@ public class Test {
                 new LoginParams(token, userId, timestamp), new ResultCallback<Void>() {
                     @Override
                     public void onSuccess(@Nullable Void unused) {
+                        ArrayList channel = new ArrayList<>();
+                        channel.add("9999");
+                        GMSChannel channel1 = instance.createChannel("9999", new GMSChannelListener() {
+                            @Override
+                            public void onMemberJoined(@NotNull GMSChannelMember gmsChannelMember) {
+
+                            }
+
+                            @Override
+                            public void onMemberLeft(@NotNull GMSChannelMember gmsChannelMember, @NotNull MemberLeftReason memberLeftReason) {
+
+                            }
+
+                            @Override
+                            public void onMessageReceived(@NotNull GMSMessage gmsMessage, @NotNull GMSChannelMember gmsChannelMember) {
+
+                            }
+
+                            @Override
+                            public void onAttributesUpdated(@NotNull List<GMSChannelAttribute> list) {
+
+                            }
+
+                            @Override
+                            public void onMemberCountUpdated(int i) {
+
+                            }
+                        });
+
+
+                        channel1.join(new ResultCallback<Void>() {
+                            @Override
+                            public void onSuccess(@Nullable Void unused) {
+
+
+                                    channel1.leave(new ResultCallback<Void>() {
+                                        @Override
+                                        public void onSuccess(@Nullable Void unused) {
+                                            instance.getChannelMemberCount(channel, new ResultCallback<Map<String, Integer>>() {
+                                                @Override
+                                                public void onSuccess(@Nullable Map<String, Integer> stringIntegerMap) {
+                                                    System.out.println(stringIntegerMap);
+
+                                                }
+
+                                                @Override
+                                                public void onFailure(@NotNull ErrorInfo errorInfo) {
+                                                    System.out.println(errorInfo);
+                                                }
+                                            });
+                                        }
+
+                                        @Override
+                                        public void onFailure(@NotNull ErrorInfo errorInfo) {
+
+                                        }
+                                    });
+
+                            }
+
+                            @Override
+                            public void onFailure(@NotNull ErrorInfo errorInfo) {
+
+                            }
+                        });
 
                     }
 
