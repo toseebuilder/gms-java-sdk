@@ -1,19 +1,19 @@
-import com.rz.gms.ErrorInfo;
-import com.rz.gms.ResultCallback;
-import com.rz.gms.bean.LoginParams;
-import com.rz.gms.channel.GMSChannel;
-import com.rz.gms.channel.GMSChannelListener;
-import com.rz.gms.channel.MemberLeftReason;
-import com.rz.gms.channel.bean.GMSChannelAttribute;
-import com.rz.gms.channel.bean.GMSChannelMember;
-import com.rz.gms.client.GMSClient;
-import com.rz.gms.client.GMSClientListener;
-import com.rz.gms.connect.bean.EnvConfig;
-import com.rz.gms.connect.bean.GMSMessage;
-import com.rz.gms.connect.bean.Options;
-import com.rz.gms.user.GMSAttributeWithState;
-import com.rz.gms.utils.EmptyUtils;
-import com.rz.gms.utils.EncryptUtils;
+import cn.ts.gms.ErrorInfo;
+import cn.ts.gms.ResultCallback;
+import cn.ts.gms.bean.LoginParams;
+import cn.ts.gms.channel.GMSChannel;
+import cn.ts.gms.channel.GMSChannelListener;
+import cn.ts.gms.channel.MemberLeftReason;
+import cn.ts.gms.channel.bean.GMSChannelAttribute;
+import cn.ts.gms.channel.bean.GMSChannelMember;
+import cn.ts.gms.client.GMSClient;
+import cn.ts.gms.client.GMSClientListener;
+import cn.ts.gms.connect.bean.EnvConfig;
+import cn.ts.gms.connect.bean.GMSMessage;
+import cn.ts.gms.connect.bean.Options;
+import cn.ts.gms.user.GMSAttributeWithState;
+import cn.ts.gms.utils.EmptyUtils;
+import cn.ts.gms.utils.EncryptUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -112,6 +112,12 @@ public class Test {
                         channel.add("9999");
                         GMSChannel channel1 = instance.createChannel("9999", new GMSChannelListener() {
                             @Override
+                            public void onAttributesUpdated(@NotNull List<GMSChannelAttribute> list) {
+
+                            }
+
+
+                            @Override
                             public void onMemberJoined(@NotNull GMSChannelMember gmsChannelMember) {
 
                             }
@@ -126,10 +132,6 @@ public class Test {
 
                             }
 
-                            @Override
-                            public void onAttributesUpdated(@NotNull List<GMSChannelAttribute> list) {
-
-                            }
 
                             @Override
                             public void onMemberCountUpdated(int i) {
@@ -189,7 +191,7 @@ public class Test {
         return GMSClient.createInstance(
 //            applicationContext,
                 TEST_APPID,
-                new Options(new EnvConfig("https://api-dev.rzrtc.com")),
+                new Options(new EnvConfig("https://api-dev.rzrtc.com","https://www.baidu.com")),
                 new GMSClientListener() {
                     @Override
                     public void onConnectionStateChanged(int i, int i1) {
