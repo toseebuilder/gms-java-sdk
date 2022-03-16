@@ -37,7 +37,7 @@ jar {
     }
 }
 dependencies {
-    compile fileTree(dir:'lib',include:['release_gmssdk_java_2.0.0_130_20220311163659_13e85c87655fbbeaf44373452dd45f57109ac347.jar','rz_socket.jar','logan-java-1.1.3.jar'])
+    compile fileTree(dir:'lib',include:['release_gmssdk_java_2.1.0_130_20220316180211_3798130a024be870a6592b58b79ebfcb0c639707.jar','rz_socket.jar','logan-java-1.1.3.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72"
 
     implementation "org.json:json:20201115"
@@ -46,7 +46,7 @@ dependencies {
     implementation("org.slf4j:slf4j-api:1.7.30")
     implementation("ch.qos.logback:logback-core:1.2.3")
     implementation("ch.qos.logback:logback-classic:1.2.3")
-//    implementation 'com.github.toseebuilder:gms-java-sdk:2.0.0'
+//    implementation ('com.github.toseebuilder:gms-java-sdk:2.1.0')
 }
 // To specify a license in the pom:
 install {

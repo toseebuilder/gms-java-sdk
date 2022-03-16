@@ -1,19 +1,19 @@
-import cn.ts.gms.ErrorInfo;
-import cn.ts.gms.ResultCallback;
-import cn.ts.gms.bean.LoginParams;
-import cn.ts.gms.channel.GMSChannel;
-import cn.ts.gms.channel.GMSChannelListener;
-import cn.ts.gms.channel.MemberLeftReason;
-import cn.ts.gms.channel.bean.GMSChannelAttribute;
-import cn.ts.gms.channel.bean.GMSChannelMember;
-import cn.ts.gms.client.GMSClient;
-import cn.ts.gms.client.GMSClientListener;
-import cn.ts.gms.connect.bean.EnvConfig;
-import cn.ts.gms.connect.bean.GMSMessage;
-import cn.ts.gms.connect.bean.Options;
-import cn.ts.gms.user.GMSAttributeWithState;
-import cn.ts.gms.utils.EmptyUtils;
-import cn.ts.gms.utils.EncryptUtils;
+import cn.tosee.gms.ErrorInfo;
+import cn.tosee.gms.ResultCallback;
+import cn.tosee.gms.bean.LoginParams;
+import cn.tosee.gms.channel.GMSChannel;
+import cn.tosee.gms.channel.GMSChannelListener;
+import cn.tosee.gms.channel.MemberLeftReason;
+import cn.tosee.gms.channel.bean.GMSChannelAttribute;
+import cn.tosee.gms.channel.bean.GMSChannelMember;
+import cn.tosee.gms.client.GMSClient;
+import cn.tosee.gms.client.GMSClientListener;
+import cn.tosee.gms.connect.bean.EnvConfig;
+import cn.tosee.gms.connect.bean.GMSMessage;
+import cn.tosee.gms.connect.bean.Options;
+import cn.tosee.gms.user.GMSAttributeWithState;
+import cn.tosee.gms.utils.EmptyUtils;
+import cn.tosee.gms.utils.EncryptUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -191,7 +191,7 @@ public class Test {
         return GMSClient.createInstance(
 //            applicationContext,
                 TEST_APPID,
-                new Options(new EnvConfig("https://api-dev.rzrtc.com","https://www.baidu.com")),
+                new Options(new EnvConfig("https://api-dev.rzrtc.com","https://data-center-dev.tosee.cn")),
                 new GMSClientListener() {
                     @Override
                     public void onConnectionStateChanged(int i, int i1) {
