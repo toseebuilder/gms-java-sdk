@@ -191,7 +191,7 @@ public class Test {
         return GMSClient.createInstance(
 //            applicationContext,
                 TEST_APPID,
-                new Options(new EnvConfig("https://api-dev.rzrtc.com","https://data-center-dev.tosee.cn")),
+                new Options(new EnvConfig("https://rtc-api-dev.tosee.cn","https://data-center-dev.tosee.cn")),
                 new GMSClientListener() {
                     @Override
                     public void onConnectionStateChanged(int i, int i1) {
