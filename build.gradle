@@ -37,17 +37,17 @@ jar {
     }
 }
 dependencies {
-    compile fileTree(dir:'lib',include:['*.jar'])
+    compile fileTree(dir: 'lib', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72"
 
-    implementation "org.json:json:20201115"
-    implementation 'com.rzrtc:logan-java:1.1.3'
-    implementation 'com.google.code.gson:gson:2.6.2'
-    implementation("org.slf4j:slf4j-api:1.7.30")
-    implementation("ch.qos.logback:logback-core:1.2.3")
-    implementation("ch.qos.logback:logback-classic:1.2.3")
+    compile ("org.json:json:20201115")
+    compile("com.rzrtc:logan-java:1.1.3")
+    compile('com.google.code.gson:gson:2.6.2')
+    compile("org.slf4j:slf4j-api:1.7.30")
+    compile("ch.qos.logback:logback-core:1.2.3") //待java logan 库添加
+    compile("ch.qos.logback:logback-classic:1.2.3") //待java logan 库添加
 //    implementation 'com.github.toseebuilder:gms-java-sdk:2.1.1'
-//        implementation 'com.github.rzrtcbuilder:gms-java-sdk:2.1.1-SNAPSHOT'
+//        implementation 'com.github.toseebuilder:gms-java-sdk:2.1.3-SNAPSHOT'
 }
 // To specify a license in the pom:
 install {
@@ -64,9 +64,9 @@ install {
     }
 }
 
-def group_jar = 'com.github.rzrtcbuilder'
+def group_jar = 'com.github.toseebuilder'
 //def version_jar =  '1.5.3' //release仓库 使用
-def version_jar = '2.1.1-SNAPSHOT' //推送开发库使用
+def version_jar = '2.1.3-SNAPSHOT' //推送开发库使用
 def artifactId_jar = 'gms-java-sdk'
 
 apply plugin: 'maven'
