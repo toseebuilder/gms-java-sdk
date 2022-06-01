@@ -1,0 +1,107 @@
+2022-06-01 15:15:42.314 [main] INFO  com.rzrtc.logan.LoganImpl:41 - 检查Logan配置
+2022-06-01 15:15:42.865 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan
+2022-06-01 15:15:42.869 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan/backup
+2022-06-01 15:15:42.870 [main] INFO  com.rzrtc.logan.LoganImpl:94 - 检查磁盘空间:/
+	空闲:284849152000
+	总共:494384795648
+	已用:209535643648
+	空闲率:0.5761689164138686
+2022-06-01 15:15:42.872 [main] INFO  com.rzrtc.logan.LoganImpl:30 - 自动上传开启，上传时间间隔:60000ms
+2022-06-01 15:15:43.024 [main] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-0.log日志文件
+2022-06-01 15:15:43.050 [ForkJoinPool.commonPool-worker-3] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-1.log日志文件
+2022-06-01 15:15:43.053 [pool-3-thread-1] INFO  com.rzrtc.logan.ManualUploadTask:34 - 手动上传开始
+2022-06-01 15:15:43.082 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:133 - uploader isLimit:false, filename: logan-0.log.gz
+2022-06-01 15:15:43.947 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:64 - 204|Response{protocol=h2, code=204, message=, url=https://data-center-dev.tosee.cn/gms/v1/collect-logan}
+2022-06-01 15:15:43.958 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:133 - uploader isLimit:false, filename: logan-1.log.gz
+2022-06-01 15:15:43.984 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:64 - 204|Response{protocol=h2, code=204, message=, url=https://data-center-dev.tosee.cn/gms/v1/collect-logan}
+2022-06-01 15:15:43.986 [pool-3-thread-1] INFO  com.rzrtc.logan.ManualUploadTask:46 - 手动上传结束
+2022-06-01 15:16:42.909 [pool-2-thread-2] INFO  com.rzrtc.logan.AutoUploadTask:41 - 自动上传任务开始
+2022-06-01 15:16:42.914 [pool-2-thread-2] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-0.log日志文件
+2022-06-01 15:16:42.917 [pool-2-thread-2] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
+2022-06-01 15:17:36.467 [main] INFO  com.rzrtc.logan.LoganImpl:41 - 检查Logan配置
+2022-06-01 15:17:36.985 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan
+2022-06-01 15:17:36.988 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan/backup
+2022-06-01 15:17:36.988 [main] INFO  com.rzrtc.logan.LoganImpl:94 - 检查磁盘空间:/
+	空闲:284842844160
+	总共:494384795648
+	已用:209541951488
+	空闲率:0.5761561574454385
+2022-06-01 15:17:36.990 [main] INFO  com.rzrtc.logan.LoganImpl:30 - 自动上传开启，上传时间间隔:60000ms
+2022-06-01 15:17:37.130 [main] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-1.log日志文件
+2022-06-01 15:17:37.160 [ForkJoinPool.commonPool-worker-3] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-2.log日志文件
+2022-06-01 15:17:37.164 [pool-3-thread-1] INFO  com.rzrtc.logan.ManualUploadTask:34 - 手动上传开始
+2022-06-01 15:17:37.195 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:133 - uploader isLimit:false, filename: logan-1.log.gz
+2022-06-01 15:17:37.793 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:64 - 204|Response{protocol=h2, code=204, message=, url=https://data-center-dev.tosee.cn/gms/v1/collect-logan}
+2022-06-01 15:17:37.803 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:133 - uploader isLimit:false, filename: logan-2.log.gz
+2022-06-01 15:17:37.865 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:64 - 204|Response{protocol=h2, code=204, message=, url=https://data-center-dev.tosee.cn/gms/v1/collect-logan}
+2022-06-01 15:17:37.867 [pool-3-thread-1] INFO  com.rzrtc.logan.ManualUploadTask:46 - 手动上传结束
+2022-06-01 15:18:42.528 [main] INFO  com.rzrtc.logan.LoganImpl:41 - 检查Logan配置
+2022-06-01 15:18:43.063 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan
+2022-06-01 15:18:43.067 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan/backup
+2022-06-01 15:18:43.068 [main] INFO  com.rzrtc.logan.LoganImpl:94 - 检查磁盘空间:/
+	空闲:284839694336
+	总共:494384795648
+	已用:209545101312
+	空闲率:0.5761497862462678
+2022-06-01 15:18:43.070 [main] INFO  com.rzrtc.logan.LoganImpl:30 - 自动上传开启，上传时间间隔:60000ms
+2022-06-01 15:18:43.260 [main] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-0.log日志文件
+2022-06-01 15:18:43.291 [ForkJoinPool.commonPool-worker-3] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-1.log日志文件
+2022-06-01 15:18:43.295 [pool-3-thread-1] INFO  com.rzrtc.logan.ManualUploadTask:34 - 手动上传开始
+2022-06-01 15:18:43.320 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:133 - uploader isLimit:false, filename: logan-0.log.gz
+2022-06-01 15:18:43.990 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:64 - 204|Response{protocol=h2, code=204, message=, url=https://data-center-dev.tosee.cn/gms/v1/collect-logan}
+2022-06-01 15:18:43.996 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:133 - uploader isLimit:false, filename: logan-1.log.gz
+2022-06-01 15:18:44.011 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:64 - 204|Response{protocol=h2, code=204, message=, url=https://data-center-dev.tosee.cn/gms/v1/collect-logan}
+2022-06-01 15:18:44.012 [pool-3-thread-1] INFO  com.rzrtc.logan.ManualUploadTask:46 - 手动上传结束
+2022-06-01 15:19:12.264 [main] INFO  com.rzrtc.logan.LoganImpl:41 - 检查Logan配置
+2022-06-01 15:19:13.521 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan
+2022-06-01 15:19:13.526 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan/backup
+2022-06-01 15:19:13.527 [main] INFO  com.rzrtc.logan.LoganImpl:94 - 检查磁盘空间:/
+	空闲:284838506496
+	总共:494384795648
+	已用:209546289152
+	空闲率:0.5761473835833817
+2022-06-01 15:19:13.529 [main] INFO  com.rzrtc.logan.LoganImpl:30 - 自动上传开启，上传时间间隔:60000ms
+2022-06-01 15:19:42.487 [main] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-0.log日志文件
+2022-06-01 15:19:42.511 [ForkJoinPool.commonPool-worker-3] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-1.log日志文件
+2022-06-01 15:19:42.515 [pool-3-thread-1] INFO  com.rzrtc.logan.ManualUploadTask:34 - 手动上传开始
+2022-06-01 15:19:42.545 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:133 - uploader isLimit:false, filename: logan-0.log.gz
+2022-06-01 15:19:43.445 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:64 - 204|Response{protocol=h2, code=204, message=, url=https://data-center-dev.tosee.cn/gms/v1/collect-logan}
+2022-06-01 15:19:43.456 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:133 - uploader isLimit:false, filename: logan-1.log.gz
+2022-06-01 15:19:43.470 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:64 - 204|Response{protocol=h2, code=204, message=, url=https://data-center-dev.tosee.cn/gms/v1/collect-logan}
+2022-06-01 15:19:43.472 [pool-3-thread-1] INFO  com.rzrtc.logan.ManualUploadTask:46 - 手动上传结束
+2022-06-01 15:30:35.589 [main] INFO  com.rzrtc.logan.LoganImpl:41 - 检查Logan配置
+2022-06-01 15:30:36.054 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan
+2022-06-01 15:30:36.057 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan/backup
+2022-06-01 15:30:36.058 [main] INFO  com.rzrtc.logan.LoganImpl:94 - 检查磁盘空间:/
+	空闲:284802048000
+	总共:494384795648
+	已用:209582747648
+	空闲率:0.5760736384028645
+2022-06-01 15:30:36.060 [main] INFO  com.rzrtc.logan.LoganImpl:30 - 自动上传开启，上传时间间隔:60000ms
+2022-06-01 15:30:39.118 [main] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-0.log日志文件
+2022-06-01 15:30:39.145 [ForkJoinPool.commonPool-worker-3] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-1.log日志文件
+2022-06-01 15:30:39.150 [pool-3-thread-1] INFO  com.rzrtc.logan.ManualUploadTask:34 - 手动上传开始
+2022-06-01 15:30:39.171 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:133 - uploader isLimit:false, filename: logan-0.log.gz
+2022-06-01 15:30:39.874 [pool-3-thread-1] INFO  com.rzrtc.logan.Uploader:64 - 204|Response{protocol=h2, code=204, message=, url=https://data-center-dev.tosee.cn/gms/v1/collect-logan}
+2022-06-01 15:30:39.878 [pool-3-thread-1] INFO  com.rzrtc.logan.ManualUploadTask:46 - 手动上传结束
+2022-06-01 15:31:36.107 [pool-2-thread-2] INFO  com.rzrtc.logan.AutoUploadTask:41 - 自动上传任务开始
+2022-06-01 15:31:36.116 [pool-2-thread-2] INFO  com.rzrtc.logan.LoganImpl:207 - 创建/Users/lizejun/develop/github/gms-java-sdk/logan/logan-2.log日志文件
+2022-06-01 15:31:36.130 [pool-2-thread-2] INFO  com.rzrtc.logan.Uploader:133 - uploader isLimit:true, filename: logan-1.log.gz
+2022-06-01 15:31:36.248 [pool-2-thread-2] INFO  com.rzrtc.logan.Uploader:64 - 200|Response{protocol=h2, code=200, message=, url=https://data-center-dev.tosee.cn/gms/v1/collect-logan}
+2022-06-01 15:31:36.249 [pool-2-thread-2] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
+2022-06-01 15:32:36.097 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:41 - 自动上传任务开始
+2022-06-01 15:32:36.110 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
+2022-06-01 15:33:36.098 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:41 - 自动上传任务开始
+2022-06-01 15:33:36.136 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
+2022-06-01 15:34:36.091 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:41 - 自动上传任务开始
+2022-06-01 15:34:36.108 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
+2022-06-01 15:35:36.092 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:41 - 自动上传任务开始
+2022-06-01 15:35:36.103 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
+2022-06-01 15:36:36.090 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:41 - 自动上传任务开始
+2022-06-01 15:36:36.110 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
+2022-06-01 15:37:36.091 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:41 - 自动上传任务开始
+2022-06-01 15:37:36.102 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
+2022-06-01 15:38:36.089 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:41 - 自动上传任务开始
+2022-06-01 15:38:36.091 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
+2022-06-01 15:39:36.094 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:41 - 自动上传任务开始
+2022-06-01 15:39:36.097 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
