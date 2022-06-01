@@ -41,12 +41,13 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72"
 
     implementation "org.json:json:20201115"
-//    implementation 'com.rzrtc:logan-java:1.1.3'
+    implementation 'com.rzrtc:logan-java:1.1.3'
     implementation 'com.google.code.gson:gson:2.6.2'
     implementation("org.slf4j:slf4j-api:1.7.30")
     implementation("ch.qos.logback:logback-core:1.2.3")
     implementation("ch.qos.logback:logback-classic:1.2.3")
-//    implementation 'com.github.rzrtcbuilder:gms-java-sdk:2.1.1-SNAPSHOT'
+//    implementation 'com.github.toseebuilder:gms-java-sdk:2.1.1'
+//        implementation 'com.github.rzrtcbuilder:gms-java-sdk:2.1.1-SNAPSHOT'
 }
 // To specify a license in the pom:
 install {
