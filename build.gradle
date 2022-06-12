@@ -66,7 +66,7 @@ install {
 
 def group_jar = 'com.github.toseebuilder'
 //def version_jar =  '1.5.3' //release仓库 使用
-def version_jar = '2.1.3-SNAPSHOT' //推送开发库使用
+def version_jar = '2.1.2-SNAPSHOT' //推送开发库使用
 def artifactId_jar = 'gms-java-sdk'
 
 apply plugin: 'maven'
