@@ -10,20 +10,7 @@ repositories {
     maven {
         url 'https://maven.aliyun.com/repository/public'
     }
-    maven {
-        credentials {
-            username '61b6beeed6190210d87450f0'
-            password 'blwnkGQJz-JL'
-        }
-        url 'https://packages.aliyun.com/maven/repository/2165194-release-fjDUQT/'
-    }
-    maven {
-        credentials {
-            username '61b6beeed6190210d87450f0'
-            password 'blwnkGQJz-JL'
-        }
-        url 'https://packages.aliyun.com/maven/repository/2165194-snapshot-vBNXKq/'
-    }
+
 }
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -41,7 +28,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72"
 
     compile ("org.json:json:20201115")
-    compile("com.rzrtc:logan-java:1.1.3")
+    compile("com.github.toseebuilder:logan-java-sdk:1.1.3.1001")
     compile('com.google.code.gson:gson:2.6.2')
     compile("org.slf4j:slf4j-api:1.7.30")
     compile("ch.qos.logback:logback-core:1.2.3") //待java logan 库添加
@@ -69,25 +56,3 @@ def group_jar = 'com.github.toseebuilder'
 def version_jar = '2.1.2-SNAPSHOT' //推送开发库使用
 def artifactId_jar = 'gms-java-sdk'
 
-apply plugin: 'maven'
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: 'https://packages.aliyun.com/maven/repository/2165194-release-fjDUQT/') {
-                authentication(
-                        userName: '61b6beeed6190210d87450f0',
-                        password: 'blwnkGQJz-JL'
-                )
-            }
-            snapshotRepository(url: 'https://packages.aliyun.com/maven/repository/2165194-snapshot-vBNXKq/') {
-                authentication(
-                        userName: '61b6beeed6190210d87450f0',
-                        password: 'blwnkGQJz-JL'
-                )
-            }
-            pom.version = "${version_jar}"
-            pom.artifactId = "${artifactId_jar}"
-            pom.groupId = "${group_jar}"
-        }
-    }
-}
