@@ -105,3 +105,19 @@
 2022-06-01 15:38:36.091 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
 2022-06-01 15:39:36.094 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:41 - 自动上传任务开始
 2022-06-01 15:39:36.097 [pool-2-thread-1] INFO  com.rzrtc.logan.AutoUploadTask:53 - 自动上传任务结束
+2022-08-02 15:24:51.649 [main] INFO  com.rzrtc.logan.LoganImpl:41 - 检查Logan配置
+2022-08-02 15:24:52.208 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan
+2022-08-02 15:24:52.213 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan/backup
+2022-08-02 15:24:52.213 [main] INFO  com.rzrtc.logan.LoganImpl:94 - 检查磁盘空间:/
+	空闲:16503181312
+	总共:494384795648
+	已用:477881614336
+	空闲率:0.03338124767847877
+2022-08-02 15:25:01.183 [main] INFO  com.rzrtc.logan.LoganImpl:41 - 检查Logan配置
+2022-08-02 15:25:02.144 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan
+2022-08-02 15:25:02.149 [main] INFO  com.rzrtc.logan.LoganImpl:71 - 检查文件夹权限:/Users/lizejun/develop/github/gms-java-sdk/logan/backup
+2022-08-02 15:25:02.150 [main] INFO  com.rzrtc.logan.LoganImpl:94 - 检查磁盘空间:/
+	空闲:16503128064
+	总共:494384795648
+	已用:477881667584
+	空闲率:0.03338113997290111
